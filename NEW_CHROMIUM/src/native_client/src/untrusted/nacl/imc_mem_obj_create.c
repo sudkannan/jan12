@@ -31,13 +31,15 @@ int imc_mem_obj_create(size_t nbytes) {
 
 //NVRAM chnages
 unsigned long imc_nvram_obj_create(size_t nbytes) {
+
+
   unsigned long retval = NACL_SYSCALL(imc_nvram_obj_create)(nbytes);
-  if (retval < 0) {
+  if (retval == 0) {
     errno = -retval;
-    return -1;
+    return 0;
   }
 
-  fprintf(stderr, "ENTERING imc_mem_obj_create %lu\n", retval);
+  printf("ENTERING imc_mem_obj_create, DUMMY FUNCTION %lu\n", retval);
 
   return retval;
   
