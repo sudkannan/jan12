@@ -92,9 +92,9 @@
 
 #define NACL_sys_test_infoleak          109
 
-#define NACL_MAX_SYSCALLS               110
+//NVRAM  changes
+#define NACL_sys_imc_nvram_obj_create   115
 
-//NVRAM changes
-#define NACL_sys_imc_mem_obj_create     120
+#define NACL_MAX_SYSCALLS               116
 
 #endif
